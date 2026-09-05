@@ -50,7 +50,20 @@ This is an original, stylized fan interpretation, **not an exact reconstruction 
 
 ## Source and verification
 
+### Visual upgrade — 1.1
+
+- 1024-pixel brushed-metal, quilted-liner, woven-fabric, and thermal-foil surface maps, with roughness and bump detail.
+- Rounded equipment edges, smoother tanks and fittings, sharper instrument displays, and a 2048-pixel viewport sky.
+- Environment reflections, a cached local shadow map, ambient occlusion, and a subtle light glow.
+- Keyboards, throttle levers, pressure gauges, hand valves, pipe elbows, medical equipment, seat restraints, individual plant leaves, and a telescope.
+- Exterior structural trusses, insulation panels, cable reels, RCS clusters, antennae, radiator cells, and ribbed engine bells.
+- **Menu → Graphics quality → High / Balanced**. Balanced retains all modeled detail and surface maps while disabling shadows and ambient occlusion and limiting render resolution.
+
+All assets are generated locally; no network textures or model downloads are required. This remains a stylized procedural game rather than a photorealistic production-asset recreation.
+
 Editable source is in `source/`. With Node.js installed, run `npm install` and `npm run build` from this folder to rebuild `index.html`.
+
+Run `npm test` with Chrome installed for the offline browser playthrough. Screenshots and the test report are written to `.test-artifacts/`.
 
 The build was tested in Chrome with real keyboard/browser inputs: movement through every unit, instrument interaction, both ladder directions, hull collisions, centrifuge deployment and retraction, exterior return, map access, and saved mission progress. The 1 g calculation was checked independently. See `verification.json` for the test result.
 

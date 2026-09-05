@@ -7,6 +7,6 @@ const out=path.resolve(here,'..');
 const result=await build({entryPoints:[path.join(here,'game.js')],bundle:true,write:false,minify:true,format:'iife',target:'es2020',legalComments:'inline'});
 const script=result.outputFiles[0].text.replace(/<\/script/gi,'<\\/script');
 const wrapped=`try { ${script} } catch(error) { document.getElementById('error').classList.remove('hidden'); document.getElementById('error').textContent='The ship could not start. Open this file in Chrome or Edge with hardware acceleration enabled. '+error.message; }`;
-const html=fs.readFileSync(path.join(here,'shell.html'),'utf8').replace('/*STYLE*/',fs.readFileSync(path.join(here,'style.css'),'utf8')).replace('/*SCRIPT*/',wrapped);
+const html=fs.readFileSync(path.join(here,'shell.html'),'utf8').replace('/*STYLE*/',()=>fs.readFileSync(path.join(here,'style.css'),'utf8')).replace('/*SCRIPT*/',()=>wrapped);
 fs.writeFileSync(path.join(out,'index.html'),html);
 console.log(`Built offline game: ${path.join(out,'index.html')} (${(html.length/1024).toFixed(0)} KB)`);
