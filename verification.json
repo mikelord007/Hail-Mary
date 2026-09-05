@@ -1,0 +1,53 @@
+{
+  "result": "PASS",
+  "checks": [
+    "Initial WebGL scene",
+    "Walking through all six units",
+    "Sample interaction",
+    "Ladder ascent and descent",
+    "Solid hull boundary collision",
+    "Centrifuge extension and spin-up",
+    "1 g physics at 25 m radius",
+    "Centrifuge retraction",
+    "Exterior camera and return",
+    "Map dialog",
+    "No JavaScript errors",
+    "Offline file launch without network requests",
+    "Escape pause, settings and resume",
+    "Mission persistence after reload"
+  ],
+  "state": {
+    "started": true,
+    "paused": false,
+    "externalMode": false,
+    "position": [
+      -0.002399999999994226,
+      1.68,
+      26.743850000000368
+    ],
+    "yaw": 0,
+    "pitch": 0,
+    "ground": 0,
+    "climbing": false,
+    "room": "crew",
+    "visited": [
+      "lab",
+      "flight",
+      "observation",
+      "engineering",
+      "garden",
+      "crew"
+    ],
+    "done": [
+      "sample",
+      "ladder",
+      "tour",
+      "gravity"
+    ],
+    "deploy": 0,
+    "rpm": 0,
+    "gravity": 1,
+    "drawCalls": 62,
+    "triangles": 110668
+  }
+}
